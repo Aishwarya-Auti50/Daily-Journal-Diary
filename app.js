@@ -1,3 +1,5 @@
+//FQ9MJyM
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -15,7 +17,11 @@ var requestedPostId1;
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://Admin:Priyaish38@blog-app.ko4hp.mongodb.net/blogDB?retryWrites=true&w=majority");
+mongoose.connect("mongodb://127.0.0.1:27017/blogDB",{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -162,5 +168,3 @@ if (port == null || port == "") {
 app.listen(port, function() {
   console.log("Server started on port 3000");
 });
-
-// _.lowerCase()

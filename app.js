@@ -17,7 +17,7 @@ var requestedPostId1;
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb://127.0.0.1:27017/blogDB",{
+mongoose.connect("mongodb+srv://aishwaryaauti50:zzw27iBJvTGlKBt1@blogdb.wuvu2jd.mongodb.net/?retryWrites=true&w=majority&appName=Blogdb",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
